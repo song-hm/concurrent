@@ -15,7 +15,7 @@ public class Singleton {
     private Singleton() {
         System.out.println("singleton is create");
     }
-    //instance对象必须是private并且是static，private保证instance的安全性，否则一个意外就可能是的instance变为null
+    //instance对象必须是private并且是static，private保证instance的安全性，否则一个意外就可能使的instance变为null
     //由于工厂方法getInstance（）必须是static的，因此instance也必须是static的。
     private static Singleton instance = new Singleton();
     public static Singleton getInstance(){
@@ -26,7 +26,7 @@ public class Singleton {
         //任何对Singleton方法或字段的引用都会导致类初始化，并创建instance实例
         System.out.println(Singleton.STATUS);
         //打印结果：
-        // singlton is create
+        // singleton is create
         // 1
 
     }
